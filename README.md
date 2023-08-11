@@ -6,7 +6,13 @@
 * command_name --help   <br> 
 * clear  <br> 
 
-In open lane working directory there are three dir PDK and open_lane 
+ 
+#OpenLANE Files
+In open lane working directory there are three dir PDK a
+
+skywater-pdk: contains PDK files provided by foundry
+open_pdks: contains scripts to setup pdks for opensource tools
+sky130A: contains sky130 pdk files
 
 # invoking open lane 
 ![Screenshot (861)](https://github.com/lsr20/PD_openlane/assets/141831819/da600eb1-a71c-4b2f-b0ad-1c8404233d36)
