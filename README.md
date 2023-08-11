@@ -1,7 +1,7 @@
 # PD_openlane
 
 # Some Basic to Linux Command
-ls -ltr
+ls -ltr \n
 pwd
 command_name --help
 clear
