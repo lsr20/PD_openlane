@@ -110,7 +110,7 @@ To run floorplan in OpenLANE command :
 
 * floor plan 
 
-
+command - magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read merged_unpadded.lef def picorv32a.floorplan.def &
 
 
 
