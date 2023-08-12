@@ -16,3 +16,4 @@ sky130A: contains sky130 pdk files
 
 # invoking open lane 
 ![Screenshot (861)](https://github.com/lsr20/PD_openlane/assets/141831819/da600eb1-a71c-4b2f-b0ad-1c8404233d36)
+<img width="953" alt="image" src="https://github.com/lsr20/PD_openlane/assets/141831819/e32a2dae-f8b3-4c54-927d-2bdc3404bea3">
