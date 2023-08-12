@@ -87,8 +87,11 @@ c3c-a80ffa13cdb5)
 
 
 
-# DAY 2
-
+# DAY 2 Floor Plan and Introduction to library cells
+## Define width and height of cells 
+* utlisation factor =
+* $Aspect Ratio = Height / ratio$
+## Define location of pre placed cells
 
 
 
