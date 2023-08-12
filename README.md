@@ -106,9 +106,6 @@ To run floorplan in OpenLANE command :
 * DEF lines showing the area of the die used
 
 
-
-
-
 ![2-2](https://github.com/lsr20/PD_openlane/assets/141831819/ede43543-f15f-4243-a0fa-46eccb1de762)
 
 
