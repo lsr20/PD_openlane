@@ -73,7 +73,7 @@ c3c-a80ffa13cdb5)
 
 ## Analyze the Synthesis report
 * Flop ratio
-  *  No of D flops =
+  *  No of D flops =.
   *  No of cells
  
   ![1-20](https://github.com/lsr20/PD_openlane/assets/141831819/422139fa-dd7d-4175-96f5-0e42de687724)
