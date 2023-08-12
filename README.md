@@ -117,5 +117,17 @@ command - magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sk
 
 ![2-3](https://github.com/lsr20/PD_openlane/assets/141831819/f8f1eb37-3903-4eb3-ab85-315445ea1933)
 
+#Placement
+The next step in the Digital ASIC design flow after floorplanning is placement. The synthesized netlist has been mapped to standard cells and floorplanning phase has determined the standard cells rows, enabling placement. OpenLANE does placement in two stages:
 
+*Global Placement - Optimized but not legal placement. Optimization works to reduce wirelength by reducing half parameter wirelength
+*Detailed Placement - Legalizes placement of cells into standard cell rows while adhering to global placement
 
+command : $run_placement$
+
+* All the standard cells which are at the lower left corner during floorplan are now placed in Placement of standard cells happens in respectice rows.
+  
+![2-4](https://github.com/lsr20/PD_openlane/assets/141831819/8d889808-2d70-4f27-b58d-8d8788f778ca)
+
+* Floorplan ensures - Decap, boundary of stnd. cells , tap cells, io cells are correctly placed
+* Placement ensures that Standard cells are correclty placed .
