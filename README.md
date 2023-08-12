@@ -1,13 +1,13 @@
 
-[Day 1](#Invoking Openlane)  
-# Some Basic to Linux Command
+#[Day 1]
+## Some Basic to Linux Command
 * ls -ltr  <br> 
 * pwd 
 * command_name --help   <br> 
 * clear  <br> 
 
  
-#OpenLANE Files
+## OpenLANE Files
 In open lane working directory there are three dir PDK a
 
 * skywater-pdk: contains PDK files provided by foundry
@@ -23,7 +23,7 @@ In open lane working directory there are three dir PDK a
 
 ![1-7](https://github.com/lsr20/PD_openlane/assets/141831819/5d0b0f8f-94cf-476e-9f42-376f2a16dad5)
 
-# invoking open lane 
+##  invoking open lane 
 Go to the openlane directory then floow the command as shown :
 * docker
 * ./flow.tcl -interactive
@@ -33,12 +33,12 @@ Go to the openlane directory then floow the command as shown :
 ![1-8](https://github.com/lsr20/PD_openlane/assets/141831819/27de25b3-573d-4771-987f-1cc310770d57)
 
 
-  # Imprt package
+  ## Imprt package
 * package reuire openlane
 
 ![1-9](https://github.com/lsr20/PD_openlane/assets/141831819/7253e318-ca2b-41c7-926d-337e4b4847a5)
 
-# Design floder
+## Design floder
 
 
 
@@ -49,7 +49,7 @@ c3c-a80ffa13cdb5)
 
 
 ![1-13](https://github.com/lsr20/PD_openlane/assets/141831819/f618aa46-88b8-4ac8-a21f-47ed1a0b19fc)
-# Design Setup
+## Design Setup
 * command : prep design picorv32a
 
 
@@ -65,13 +65,13 @@ c3c-a80ffa13cdb5)
 ![1-17](https://github.com/lsr20/PD_openlane/assets/141831819/d5922286-bf15-438e-be69-3bebab1f851c)
 
 
-# Run Synthesis
+## Run Synthesis
 * command : run_synthesis
   
 
 ![1-19](https://github.com/lsr20/PD_openlane/assets/141831819/163558db-f245-4b4a-a256-31468d626850)
 
-# Analyze the Synthesis report
+## Analyze the Synthesis report
 * Flop ratio
   *  No of D flops =
   *  No of cells
