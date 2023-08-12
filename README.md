@@ -88,21 +88,28 @@ c3c-a80ffa13cdb5)
 
 
 # DAY 2 Floor Plan and Introduction to library cells
-## Define width and height of cells 
-* utlisation factor =
+## 1. Define width and height of cells 
+* $ Utlisation factor = Area occupied by Netlist/ Total area of the core $
 * $Aspect Ratio = Height / ratio$
-## Define location of pre placed cells
+## 2. Define location of pre placed cells
+Arragnement of IP'S in a chip is called as $Floorplanning$. These IP's/blocks have user defined locations , and hence are placed in a chip before automated placement and routing and are called as pre placed cells. Automated place and routing tools places the remaining logical cells in the design onto chip.
+## 3. Decoupling Capacitor
+## 4.Power Planning
+## 5.Pin placement
+
+## Floorplanning with OpenLANE
+To run floorplan in OpenLANE command :
+* run_floorplan
+
+
+
+* DEF lines showing the area of the die used
 
 
 
 
 
-
-
-
-
-
-
+![2-2](https://github.com/lsr20/PD_openlane/assets/141831819/ede43543-f15f-4243-a0fa-46eccb1de762)
 
 
 
