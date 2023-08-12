@@ -108,11 +108,14 @@ To run floorplan in OpenLANE command :
 
 ![2-2](https://github.com/lsr20/PD_openlane/assets/141831819/ede43543-f15f-4243-a0fa-46eccb1de762)
 
+* floor plan 
 
 
 
 
 
+
+![2-3](https://github.com/lsr20/PD_openlane/assets/141831819/f8f1eb37-3903-4eb3-ab85-315445ea1933)
 
 
 
