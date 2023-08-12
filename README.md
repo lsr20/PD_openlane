@@ -131,3 +131,4 @@ command : $run_placement$
 
 * Floorplan ensures - Decap, boundary of stnd. cells , tap cells, io cells are correctly placed
 * Placement ensures that Standard cells are correclty placed .
+*  generally Power plan happens during Placement but in Openlane we do it post placemnt , post CTS just before routed .
