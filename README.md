@@ -10,9 +10,9 @@
 #OpenLANE Files
 In open lane working directory there are three dir PDK a
 
-skywater-pdk: contains PDK files provided by foundry
-open_pdks: contains scripts to setup pdks for opensource tools
-sky130A: contains sky130 pdk files
+* skywater-pdk: contains PDK files provided by foundry
+* open_pdks: contains scripts to setup pdks for opensource tools
+* sky130A: contains sky130 pdk files
 ![1-1](https://github.com/lsr20/PD_openlane/assets/141831819/0a08f27b-e938-4fcf-b9fc-2887644e6eea)
 ![1-2](https://github.com/lsr20/PD_openlane/assets/141831819/5eb4c2c1-a168-40c2-bc3a-0ce4eaa6bb2d)
 
