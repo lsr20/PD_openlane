@@ -145,13 +145,13 @@ OpenLANE allows users to make changes to environment variables on the fly. For i
 # Inverter Standard cell Layout and SPICE extraction
 The Magic layout of a CMOS inverter will be used so as to intergate the inverter with the picorv32a design. To do this, inverter magic file is sourced from vsdstdcelldesign by cloning it within the openlane_working_dir/openlane directory as follows:
 
-command : $git clone https://github.com/nickson-jose/vsdstdcelldesign$
+* command : $git clone https://github.com/nickson-jose/vsdstdcelldesign$
 This creates a vsdstdcelldesign named folder in the openlane directory.
 
 To invoke magic to view the sky130_inv.mag file, the sky130A.tech file must be included in the command along with its path. To ease up the complexity of this command, the tech file can be copied from the magic folder to the vsdstdcelldesign folder.
 
 The sky130_inv.mag file can then be invoked in Magic very easily:
-command :$magic -T sky130A.tech sky_inv.mag$
+* command :$magic -T sky130A.tech sky_inv.mag$
 ![3-2](https://github.com/lsr20/PD_openlane/assets/141831819/62f98488-04bc-4a09-9875-6f0977e4059f)
 
 
