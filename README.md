@@ -132,3 +132,10 @@ command : $run_placement$
 * Floorplan ensures - Decap, boundary of stnd. cells , tap cells, io cells are correctly placed
 * Placement ensures that Standard cells are correclty placed .
 *  generally Power plan happens during Placement but in Openlane we do it post placemnt , post CTS just before routed .
+
+
+# Day 3
+OpenLANE allows users to make changes to environment variables on the fly. For instance, if we wish to change the pin placement from equidistant to some other style of placement we may do the following in the openLANE flow:
+
+* set ::env(FP_IO_MODE) 2
+![3-1](https://github.com/lsr20/PD_openlane/assets/141831819/655ade82-a2f6-44c8-bb77-838e940acf23)
