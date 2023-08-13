@@ -155,3 +155,8 @@ The sky130_inv.mag file can then be invoked in Magic very easily:
 ![3-2](https://github.com/lsr20/PD_openlane/assets/141831819/62f98488-04bc-4a09-9875-6f0977e4059f)
 
 
+  # Extract the layout netlist of Inverter for ngspice simulation
+  
+* use command " extract all " in the tckon window and you will see new file is created in directory with extension .ext
+
+![3-3](https://github.com/lsr20/PD_openlane/assets/141831819/39586e66-6bb8-43a1-adc1-8b7d339215f9)
