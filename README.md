@@ -89,7 +89,7 @@ c3c-a80ffa13cdb5)
 
 # DAY 2 Floor Plan and Introduction to library cells
 ## 1. Define width and height of cells 
-* $ Utlisation factor = Area occupied by Netlist/ Total area of the core $
+*  Utlisation factor = Area occupied by Netlist/ Total area of the core 
 * $Aspect Ratio = Height / ratio$
 ## 2. Define location of pre placed cells
 Arragnement of IP'S in a chip is called as $Floorplanning$. These IP's/blocks have user defined locations , and hence are placed in a chip before automated placement and routing and are called as pre placed cells. Automated place and routing tools places the remaining logical cells in the design onto chip.
@@ -110,7 +110,7 @@ To run floorplan in OpenLANE command :
 
 * floor plan 
 
-command - magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read merged_unpadded.lef def picorv32a.floorplan.def &
+* command - magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read merged_unpadded.lef def picorv32a.floorplan.def &
 
 
 
@@ -123,7 +123,7 @@ The next step in the Digital ASIC design flow after floorplanning is placement. 
 *Global Placement - Optimized but not legal placement. Optimization works to reduce wirelength by reducing half parameter wirelength
 *Detailed Placement - Legalizes placement of cells into standard cell rows while adhering to global placement
 
-command : $run_placement$
+command : run_placement
 
 * All the standard cells which are at the lower left corner during floorplan are now placed in Placement of standard cells happens in respectice rows.
   
@@ -145,13 +145,13 @@ OpenLANE allows users to make changes to environment variables on the fly. For i
 # Inverter Standard cell Layout and SPICE extraction
 The Magic layout of a CMOS inverter will be used so as to intergate the inverter with the picorv32a design. To do this, inverter magic file is sourced from vsdstdcelldesign by cloning it within the openlane_working_dir/openlane directory as follows:
 
-* command : $git clone https://github.com/nickson-jose/vsdstdcelldesign$
+* command : git clone https://github.com/nickson-jose/vsdstdcelldesign
 This creates a vsdstdcelldesign named folder in the openlane directory.
 
 To invoke magic to view the sky130_inv.mag file, the sky130A.tech file must be included in the command along with its path. To ease up the complexity of this command, the tech file can be copied from the magic folder to the vsdstdcelldesign folder.
 
 The sky130_inv.mag file can then be invoked in Magic very easily:
-* command :$magic -T sky130A.tech sky_inv.mag$
+* command :magic -T sky130A.tech sky_inv.mag
 ![3-2](https://github.com/lsr20/PD_openlane/assets/141831819/62f98488-04bc-4a09-9875-6f0977e4059f)
 
 
