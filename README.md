@@ -165,4 +165,9 @@ The sky130_inv.mag file can then be invoked in Magic very easily:
 
 # Day 4
 
+![4-1](https://github.com/lsr20/PD_openlane/assets/141831819/08b75eda-e967-49c1-a119-b94d11fd3692)
 
+![4-2](https://github.com/lsr20/PD_openlane/assets/141831819/15e3b37c-b845-4bc0-86a6-b12054f4a37a)
+![4-3](https://github.com/lsr20/PD_openlane/assets/141831819/b9421648-ee46-47a6-a5bf-b2e98dfaca9b)
+![4-4_lef](https://github.com/lsr20/PD_openlane/assets/141831819/20e20321-ba39-4f09-bb1b-b969cf4f3bef)
+![4-5](https://github.com/lsr20/PD_openlane/assets/141831819/a58ecec3-d9eb-4577-bc48-d073fec2bf90)
