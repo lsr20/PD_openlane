@@ -160,3 +160,9 @@ The sky130_inv.mag file can then be invoked in Magic very easily:
 * use command " extract all " in the tckon window and you will see new file is created in directory with extension .ext
 
 ![3-3](https://github.com/lsr20/PD_openlane/assets/141831819/39586e66-6bb8-43a1-adc1-8b7d339215f9)
+
+
+
+# Day 4
+
+
