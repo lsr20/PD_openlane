@@ -179,8 +179,8 @@ In order to include the new standard cell in the synthesis, copy the sky130_vsdi
 Since abc maps the standard cell to a library abc there must be a library that defines the CMOS inverter. The sky130_fd_sc_hd_typical.lib file from vsdstdcelldesign/libs directory needs to be copied to the designs/picorv32a/src directory 
 
 
-In order to integrate the standard cell in the OpenLANE flow, invoke openLANE as usual and carry out following steps:
-* Commands
+In order to integrate the standard cell in the OpenLANE flow, invoke openLANE as usual and carry out following procedure:
+ Commands :
 * prep -design picorv32a -tag 13-08_09-13 -overwrite
 *  set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 * add_lefs -src $lefs
