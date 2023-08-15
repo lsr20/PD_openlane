@@ -148,8 +148,11 @@ Review of files & Synthesis step
 ## 2. Define location of pre placed cells
 Arragnement of IP'S in a chip is called as $Floorplanning$. These IP's/blocks have user defined locations , and hence are placed in a chip before automated placement and routing and are called as pre placed cells. Automated place and routing tools places the remaining logical cells in the design onto chip.
 ## 3. Decoupling Capacitor
+Pre-placed cells must then be surrounded with decoupling capacitors (decaps). The resistances and capacitances associated with long wire lengths can cause the power supply voltage to drop significantly before reaching the logic circuits. This can lead to the signal value entering into the undefined region, outside the noise margin range. Decaps are huge capacitors charged to power supply voltage and placed close the logic circuit. Their role is to decouple the circuit from power supply by supplying the necessary amount of current to the circuit. They pervent crosstalk and enable local communication.
 ## 4.Power Planning
+Each block on the chip, however, cannot have its own decap unlike the pre-placed macros. Therefore, a good power planning ensures that each block has its own VDD and VSS pads connected to the horizontal and vertical power and GND lines which form a power mesh.
 ## 5.Pin placement
+The netlist defines connectivity between logic gates. The place between the core and die is utilised for placing pins. The connectivity information coded in either VHDL or Verilog is used to determine the position of I/O pads of various pins. Then, logical placement blocking of pre-placed macros is performed so as to differentiate that area from that of the pin area.
 
 ## Floorplanning with OpenLANE
 To run floorplan in OpenLANE command :
@@ -189,6 +192,30 @@ command : run_placement
 
 
 # Day 3
+## Design Library cell
+OpenLANE has the benefit of allowing changes to internal switches of the ASIC design flow on the fly. This allows users to experiment with floorplanning and placement without having to reinvoke the tool.
+
+## Spice Simulations
+* To simulate standard cells spice deck wrappers will need to be created around our model files.
+SPICE deck will comprise of:
+
+- Model include statements
+- Component connectivity, including substrate taps
+- Output load capacitance
+- Component values
+- Node names
+- Simulation commands
+
+To plot the output waveform of the spice deck we will use ngspice. The steps to run the simulation on ngpice are as follows:
+
+- Source the .cir spice deck file
+- Run the spice file by: run
+- Run: setplot → allows you to view any plots possible from the simulations specified in the spice deck
+- Select the simulation desired by entering the simulation name in the terminal
+- Run: display to see nodes available for plotting
+- Run: plot  vs  to obtain output waveform
+
+
 OpenLANE allows users to make changes to environment variables on the fly. For instance, if we wish to change the pin placement from equidistant to some other style of placement we may do the following in the openLANE flow:
 
 * set ::env(FP_IO_MODE) 2
