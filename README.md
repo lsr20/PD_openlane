@@ -189,3 +189,20 @@ In order to integrate the standard cell in the OpenLANE flow, invoke openLANE as
   ![4-6](https://github.com/lsr20/PD_openlane/assets/141831819/c806d4b8-ab3d-4297-a7b2-7287de17121d)
   * command- magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read merged_unpadded.lef def picorv32a.placement.def &
 ![4-7](https://github.com/lsr20/PD_openlane/assets/141831819/212ce494-d5f9-4eb2-af48-0953634b8259)
+
+# Day 5
+* Clock Tree Synthesis
+The purpose of building a clock tree is enable the clock input to reach every element and to ensure a zero clock skew. H-tree is a common methodology followed in CTS. Before attempting a CTS run in TritonCTS tool, if the slack was attempted to be reduced in previous run, the netlist may have gotten modified by cell replacement techniques. Therefore, the verilog file needs to be modified using the write_verilog command. Then, the synthesis, floorplan and placement is run again. To run CTS use the below command:
+
+command : run_cts
+The CTS run adds clock buffers in therefore buffer delays come into picture and our analysis from here on deals with real clocks. Setup and hold time slacks may now be analysed in the post-CTS STA anlysis in OpenROAD within the openLANE flow:
+
+* openroad
+* write_db pico_cts.db
+* read_db pico_cts.db
+* read_verilog /openLANE_flow/designs/picorv32a/runs/03-07_11-25/results/synthesis/picorv32a.synthesis_cts.v
+* read_liberty $::env(LIB_SYNTH_COMPLETE)
+* link_design picorv32a
+* read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+* set_propagated_clock (all_clocks)
+* report_checks -path_delay min_max -format full_clock_expanded -digits 4
