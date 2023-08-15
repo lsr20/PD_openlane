@@ -3,18 +3,18 @@ This project is done in the course "Advanced Physical Design using OpenLANE/Sky1
 
 # OpenLANE design stages
 * Synthesis
-**yosys - Performs RTL synthesis
-**y abc - Performs technology mapping
-**y OpenSTA - Performs static timing analysis on the resulting netlist to generate timing reports
+** yosys - Performs RTL synthesis
+**  abc - Performs technology mapping
+** OpenSTA - Performs static timing analysis on the resulting netlist to generate timing reports
 * Floorplan and PDN
-**y init_fp - Defines the core area for the macro as well as the rows (used for placement) and the tracks (used for routing)
-**y ioplacer - Places the macro input and output ports
-**y pdn - Generates the power distribution network
-**y tapcell - Inserts welltap and decap cells in the floorplan
+** init_fp - Defines the core area for the macro as well as the rows (used for placement) and the tracks (used for routing)
+** ioplacer - Places the macro input and output ports
+** pdn - Generates the power distribution network
+** tapcell - Inserts welltap and decap cells in the floorplan
 * Placement
-**y RePLace - Performs global placement
-**y Resizer - Performs optional optimizations on the design
-**y OpenDP - Perfroms detailed placement to legalize the globally placed components
+** RePLace - Performs global placement
+** Resizer - Performs optional optimizations on the design
+** OpenDP - Perfroms detailed placement to legalize the globally placed components
 * CTS
 ** TritonCTS - Synthesizes the clock distribution network (the clock tree)
 * Routing
