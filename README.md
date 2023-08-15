@@ -127,9 +127,9 @@ Review of files & Synthesis step
 
 ## Analyze the Synthesis report
 * Flop ratio
-  *  No of D flops =.
-  *  No of cells
- 
+  *  No of D flops =. 1613
+  *  No of cells =14876
+ * Flop ratio = 1613/14876 = 0.1084 = 10.84%
   ![1-20](https://github.com/lsr20/PD_openlane/assets/141831819/422139fa-dd7d-4175-96f5-0e42de687724)
 ![1-21](https://github.com/lsr20/PD_openlane/assets/141831819/67b394d7-b538-4a8c-94cb-2babd01e3853)
 * new floder
@@ -144,7 +144,7 @@ Review of files & Synthesis step
 # DAY 2 Floor Plan and Introduction to library cells
 ## 1. Define width and height of cells 
 *  Utlisation factor = Area occupied by Netlist/ Total area of the core 
-* $Aspect Ratio = Height / ratio$
+* Aspect Ratio = Height / ratio
 ## 2. Define location of pre placed cells
 Arragnement of IP'S in a chip is called as $Floorplanning$. These IP's/blocks have user defined locations , and hence are placed in a chip before automated placement and routing and are called as pre placed cells. Automated place and routing tools places the remaining logical cells in the design onto chip.
 ## 3. Decoupling Capacitor
