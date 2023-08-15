@@ -1,18 +1,53 @@
-# Advance Physical Design Using OpenLANE/Sky130
+<img width="432" alt="image" src="https://github.com/lsr20/PD_openlane/assets/141831819/598ed9a9-e5fd-43ce-9e20-65c1c98f98fc"># Advance Physical Design Using OpenLANE/Sky130
 This project is done in the course "Advanced Physical Design using OpenLANE/Sky130" by VLSI System Design Corporation. In this project a complete RTL to GDSII flow for PicoRV32a SoC is executed with Openlane using Skywater130nm PDK. Custom designed standard cells with Sky130 PDK are also used in the flow. Timing Optimisations are carried out. Slack violations are removed. DRC is verified.
 
-
+# OpenLANE design stages
+* Synthesis
+**yosys - Performs RTL synthesis
+**y abc - Performs technology mapping
+**y OpenSTA - Performs static timing analysis on the resulting netlist to generate timing reports
+* Floorplan and PDN
+**y init_fp - Defines the core area for the macro as well as the rows (used for placement) and the tracks (used for routing)
+**y ioplacer - Places the macro input and output ports
+**y pdn - Generates the power distribution network
+**y tapcell - Inserts welltap and decap cells in the floorplan
+* Placement
+**y RePLace - Performs global placement
+**y Resizer - Performs optional optimizations on the design
+**y OpenDP - Perfroms detailed placement to legalize the globally placed components
+* CTS
+** TritonCTS - Synthesizes the clock distribution network (the clock tree)
+* Routing
+**  FastRoute - Performs global routing to generate a guide file for the detailed router
+**  CU-GR - Another option for performing global routing.
+**  TritonRoute - Performs detailed routing
+**  SPEF-Extractor - Performs SPEF extraction
+* GDSII Generation
+**  Magic - Streams out the final GDSII layout file from the routed def
+**  Klayout - Streams out the final GDSII layout file from the routed def as a back-up
+  * Checks
+**  Magic - Performs DRC Checks & Antenna Checks
+**  Klayout - Performs DRC Checks
+**  Netgen - Performs LVS Checks
+**  CVC - Performs Circuit Validity Checks
 
 
 
 ![0-1](https://github.com/lsr20/PD_openlane/assets/141831819/8b7b9b54-8519-447d-abc4-a06ad7535b0a)
 
 
+* Synthesis: RTL Converted to gate level netlist using standard cell libraries (SCL)
+* Floor & Power Planning: Planning of silicon area to ensure robust power distribution
+* Placement: Placing cells on floorplan rows aligned with sites
+* Global Placement: for optimal position of cells
+* Detailed Placement: for legal positions
+* Routing: Valid patterns for wires
+* Signoff: Physical (DRC, LVS) and Timing verifications (STA)
 
 
 
 
-
+![0-2](https://github.com/lsr20/PD_openlane/assets/141831819/769941fc-a6ad-44c3-bc57-4f4582746e58)
 
 
 # Day 1
