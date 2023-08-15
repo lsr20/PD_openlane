@@ -1,4 +1,5 @@
-
+# Advance Physical Design Using OpenLANE/Sky130
+This project is done in the course "Advanced Physical Design using OpenLANE/Sky130" by VLSI System Design Corporation. In this project a complete RTL to GDSII flow for PicoRV32a SoC is executed with Openlane using Skywater130nm PDK. Custom designed standard cells with Sky130 PDK are also used in the flow. Timing Optimisations are carried out. Slack violations are removed. DRC is verified.
 # Day 1
 ## Some Basic to Linux Command
 * ls -ltr  <br> 
@@ -206,3 +207,11 @@ The CTS run adds clock buffers in therefore buffer delays come into picture and 
 * read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
 * set_propagated_clock (all_clocks)
 * report_checks -path_delay min_max -format full_clock_expanded -digits 4
+
+
+
+# Final steps in RTL2GDS
+* Power Distribution Network generation
+Unlike the general ASIC flow, Power Distribution Network generation is not a part of floorplan run in OpenLANE. PDN must be generated after CTS and post-CTS STA analyses:
+
+* command : gen_pdn
