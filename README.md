@@ -3,7 +3,7 @@ This project is done in the course "Advanced Physical Design using OpenLANE/Sky1
 
 # OpenLANE design stages
 * Synthesis
-** yosys - Performs RTL synthesis
+  - yosys - Performs RTL synthesis
 **  abc - Performs technology mapping
 ** OpenSTA - Performs static timing analysis on the resulting netlist to generate timing reports
 * Floorplan and PDN
