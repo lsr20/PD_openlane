@@ -1,5 +1,20 @@
 # Advance Physical Design Using OpenLANE/Sky130
 This project is done in the course "Advanced Physical Design using OpenLANE/Sky130" by VLSI System Design Corporation. In this project a complete RTL to GDSII flow for PicoRV32a SoC is executed with Openlane using Skywater130nm PDK. Custom designed standard cells with Sky130 PDK are also used in the flow. Timing Optimisations are carried out. Slack violations are removed. DRC is verified.
+
+
+
+
+
+![0-1](https://github.com/lsr20/PD_openlane/assets/141831819/8b7b9b54-8519-447d-abc4-a06ad7535b0a)
+
+
+
+
+
+
+
+
+
 # Day 1
 ## Some Basic to Linux Command
 * ls -ltr  <br> 
