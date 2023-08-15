@@ -171,3 +171,21 @@ The sky130_inv.mag file can then be invoked in Magic very easily:
 ![4-3](https://github.com/lsr20/PD_openlane/assets/141831819/b9421648-ee46-47a6-a5bf-b2e98dfaca9b)
 ![4-4_lef](https://github.com/lsr20/PD_openlane/assets/141831819/20e20321-ba39-4f09-bb1b-b969cf4f3bef)
 ![4-5](https://github.com/lsr20/PD_openlane/assets/141831819/a58ecec3-d9eb-4577-bc48-d073fec2bf90)
+
+# Integrating custom cell in OpenLANE
+
+
+In order to include the new standard cell in the synthesis, copy the sky130_vsdinv.lef file to the designs/picorv32a/src directory
+Since abc maps the standard cell to a library abc there must be a library that defines the CMOS inverter. The sky130_fd_sc_hd_typical.lib file from vsdstdcelldesign/libs directory needs to be copied to the designs/picorv32a/src directory 
+
+
+In order to integrate the standard cell in the OpenLANE flow, invoke openLANE as usual and carry out following steps:
+* Commands
+* prep -design picorv32a -tag 13-08_09-13 -overwrite
+*  set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+* add_lefs -src $lefs
+* run_synthesis
+* run_floorplan
+  ![4-6](https://github.com/lsr20/PD_openlane/assets/141831819/c806d4b8-ab3d-4297-a7b2-7287de17121d)
+  * command- magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read merged_unpadded.lef def picorv32a.placement.def &
+![4-7](https://github.com/lsr20/PD_openlane/assets/141831819/212ce494-d5f9-4eb2-af48-0953634b8259)
