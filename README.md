@@ -112,7 +112,10 @@ c3c-a80ffa13cdb5)
 
 
 ![1-16_merge lef created in runs](https://github.com/lsr20/PD_openlane/assets/141831819/50738df0-7c94-4a40-bf56-ba9bd9d23b77)
-
+Review of files & Synthesis step
+* A "runs" folder is generated within the picorv32a folder.
+* The merged file is created during the merging operation in the pircorv32a design preparation (it merges lef and techlef files)
+* Next, we run the synthesis of picorv32a design in the openlane interactive terminal:
 ![1-17](https://github.com/lsr20/PD_openlane/assets/141831819/d5922286-bf15-438e-be69-3bebab1f851c)
 
 
